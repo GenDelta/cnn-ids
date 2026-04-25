@@ -17,9 +17,6 @@ ML-Based IDS is a CNN-driven intrusion detection project built on the CICIDS2017
 - `inference_pipeline.py`: reusable inference and alert logic.
 - `app.py`: Streamlit demo interface.
 - `validate_demo_assets.py`: pre-demo validation script.
-- `generate_report_figures.py`: generates report figures in `report_assets/`.
-- `DEMO.md`: short runbook for demo operation.
-- `REPORT.md`: full technical report with architecture, metrics, and visuals.
 - `requirements.txt`: Python dependencies.
 
 ## Model Summary
