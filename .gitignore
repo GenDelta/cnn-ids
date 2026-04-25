@@ -1,0 +1,11 @@
+Checkpoints/
+datasets/
+report_assets/
+*.csv 
+*.env
+.venv/
+DEMO.md
+REPORT.pdf
+artifacts/
+__pycache__/
+REPORT.md
