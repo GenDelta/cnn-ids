@@ -11,8 +11,6 @@ ML-Based IDS is a CNN-driven intrusion detection project built on the CICIDS2017
 ## Repository Structure
 
 - `ids_model.ipynb`: end-to-end training, evaluation, and visualization notebook.
-- `Checkpoints/`: saved Keras checkpoints from model training runs.
-- `datasets/`: CICIDS2017 CSV source files.
 - `prepare_demo_assets.py`: creates demo artifacts from datasets and checkpoint.
 - `inference_pipeline.py`: reusable inference and alert logic.
 - `app.py`: Streamlit demo interface.
