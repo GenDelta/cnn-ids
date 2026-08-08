@@ -60,3 +60,5 @@ uv run streamlit run app.py
 
 - The demo is intentionally offline and replay-based for reliability.
 - Alerting policy in the app: predicted class is not `BENIGN` and confidence is above the configured threshold.
+
+<!-- Documentation-only update: added note on 2026-08-08 indicating small non-functional edits made across several project files for traceability. -->

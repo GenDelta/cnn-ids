@@ -11,6 +11,8 @@ import pandas as pd
 from tensorflow.keras.models import load_model
 
 
+# Documentation-only note: timestamp 2026-08-08. This comment documents a
+# non-functional edit across older files; it does not change behavior.
 class IDSPredictor:
     """Reusable predictor for the IDS Streamlit demo."""
 

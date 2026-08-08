@@ -12,6 +12,9 @@ from sklearn.metrics import classification_report, confusion_matrix
 from inference_pipeline import IDSPredictor, load_artifact_table
 
 
+
+# Documentation-only note: added 2026-08-08 to mark a small, non-functional
+# clarifying comment. This change does not affect runtime behavior.
 st.set_page_config(
     page_title="ML-Based IDS Demo",
     page_icon="ML",
