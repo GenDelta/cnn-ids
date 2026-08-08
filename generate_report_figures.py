@@ -7,6 +7,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
+# Documentation-only note: added 2026-08-08 for traceability. No functional change.
 from inference_pipeline import IDSPredictor
 
 

@@ -8,6 +8,8 @@ from inference_pipeline import IDSPredictor
 
 
 def main() -> None:
+    # Documentation-only edit added 2026-08-08: small comment for traceability.
+    # This file's runtime logic is unchanged.
     workspace = Path(".").resolve()
     assets_dir = workspace / "artifacts"
 

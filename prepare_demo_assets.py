@@ -14,6 +14,8 @@ from tensorflow.keras.models import load_model
 
 
 def find_best_checkpoint(checkpoints_dir: Path) -> Path:
+    # Documentation-only change added 2026-08-08: small clarifying comment.
+    # No functional modifications are made to the data-preparation logic.
     """Return checkpoint with highest val_acc based on filename pattern."""
     pattern = re.compile(r"val_acc_(\d+\.\d+)\.keras$")
     best_path: Path | None = None
