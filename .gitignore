@@ -5,7 +5,7 @@ report_assets/
 *.env
 .venv/
 DEMO.md
-REPORT.pdf
+# Keep local workspace artifacts out of version control
 artifacts/
 __pycache__/
 REPORT.md
