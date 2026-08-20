@@ -24,6 +24,15 @@ ML-Based IDS is a CNN-driven intrusion detection project built on the CICIDS2017
 - Task: 11-class traffic classification.
 - Best checkpoint: `Checkpoints/cnn_model_epoch_10_val_acc_0.9527.keras`.
 
+## Prerequisites
+
+Before running the project, make sure the following are available:
+
+- Python 3.10 or later
+- Git
+- `uv` for Python environment and dependency management
+- Sufficient disk space for the required datasets and generated demo artifacts
+
 ## Demo Application
 
 The Streamlit app is built for a reliable offline demo and includes:
@@ -36,10 +45,13 @@ The Streamlit app is built for a reliable offline demo and includes:
 ## Quick Start
 
 1. Create and use a virtual environment.
-2. Install dependencies:
 
 ```bash
 uv venv
+```
+2. Install dependencies:
+
+```bash
 uv pip install -r requirements.txt
 ```
 
@@ -57,8 +69,6 @@ uv run streamlit run app.py
 ```
 
 ## Notes
-
 - The demo is intentionally offline and replay-based for reliability.
+- The application does not capture or monitor live network traffic.
 - Alerting policy in the app: predicted class is not `BENIGN` and confidence is above the configured threshold.
-
-<!-- Documentation-only update: added note on 2026-08-08 indicating small non-functional edits made across several project files for traceability. -->
