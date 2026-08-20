@@ -9,3 +9,18 @@ DEMO.md
 artifacts/
 __pycache__/
 REPORT.md
+
+# Python bytecode
+*.pyc
+*.pyo
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# IDE settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
