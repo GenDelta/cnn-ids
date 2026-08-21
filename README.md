@@ -72,3 +72,4 @@ uv run streamlit run app.py
 - The demo is intentionally offline and replay-based for reliability.
 - The application does not capture or monitor live network traffic.
 - Alerting policy in the app: predicted class is not `BENIGN` and confidence is above the configured threshold.
+<!-- Documentation update -->
