@@ -150,7 +150,7 @@ def generate_prediction_interpretations(output_dir: Path) -> None:
     subset = demo_samples.sample(n=min(8, len(demo_samples)), random_state=123).reset_index(drop=True)
     predictions = predictor.predict(subset)
 
-    fig, axes = plt.subplots(2, 4, figsize=(16, 8))
+    fig, axes = plt.subplots(2, 4, figsize=(18, 9))
     axes = axes.flatten()
 
     for i in range(min(8, len(subset))):
@@ -162,14 +162,30 @@ def generate_prediction_interpretations(output_dir: Path) -> None:
         confidence = float(predictions.iloc[i]["confidence"]) * 100
 
         color = "green" if true_label == pred_label else "red"
-        axes[i].imshow(matrix, cmap="magma", vmin=0, vmax=1)
+        
+        sns.heatmap(
+            matrix, 
+            cmap="viridis", 
+            vmin=0, 
+            vmax=1, 
+            cbar=False, 
+            square=True, 
+            ax=axes[i], 
+            annot=True, 
+            fmt=".1f", 
+            annot_kws={"size": 7},
+            linewidths=0.5,
+            linecolor="lightgray",
+            xticklabels=False,
+            yticklabels=False
+        )
+        
         axes[i].set_title(
-            f"True: {true_label}\\nPred: {pred_label}\\nConf: {confidence:.2f}%",
+            f"True: {true_label}\nPred: {pred_label}\nConf: {confidence:.2f}%",
             fontsize=10,
             color=color,
             fontweight="bold",
         )
-        axes[i].axis("off")
 
     plt.suptitle("CNN Traffic Matrix Interpretations", fontsize=20, fontweight="bold")
     plt.tight_layout()

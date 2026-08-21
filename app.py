@@ -166,8 +166,21 @@ def render_matrix_preview(predictor: IDSPredictor, selected_row: pd.DataFrame) -
     tensor = predictor.transform_features(selected_row)
     matrix = tensor[0].reshape(predictor.grid_size, predictor.grid_size)
 
-    fig, ax = plt.subplots(figsize=(4.5, 4.5))
-    sns.heatmap(matrix, cmap="magma", cbar=True, square=True, ax=ax)
+    fig, ax = plt.subplots(figsize=(5, 5))
+    sns.heatmap(
+        matrix, 
+        cmap="viridis", 
+        cbar=True, 
+        square=True, 
+        ax=ax, 
+        annot=True, 
+        fmt=".2f", 
+        annot_kws={"size": 7},
+        linewidths=0.5,
+        linecolor="lightgray",
+        xticklabels=False,
+        yticklabels=False
+    )
     ax.set_title(f"Traffic Matrix ({predictor.grid_size}x{predictor.grid_size})")
     st.pyplot(fig, clear_figure=True)
 
