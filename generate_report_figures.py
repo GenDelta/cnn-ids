@@ -165,7 +165,7 @@ def generate_prediction_interpretations(output_dir: Path) -> None:
         
         sns.heatmap(
             matrix, 
-            cmap="viridis", 
+            cmap="gray", 
             vmin=0, 
             vmax=1, 
             cbar=False, 
