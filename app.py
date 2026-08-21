@@ -450,6 +450,16 @@ def run_batch_summary_tab(
             st.dataframe(misclassified[cols].head(25), use_container_width=True, hide_index=True)
         else:
             st.success("No misclassifications in this evaluated subset.")
+            
+        st.divider()
+        csv = predictions.to_csv(index=False)
+        st.download_button(
+            label="📥 Download Full Batch Predictions (CSV)",
+            data=csv,
+            file_name="batch_predictions.csv",
+            mime="text/csv",
+            help="Download the complete set of predictions for this batch, including all features and probabilities."
+        )
 
 
 def run_model_insights_tab(predictor: IDSPredictor, demo_samples: pd.DataFrame, threshold: float) -> None:
