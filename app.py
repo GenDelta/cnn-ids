@@ -169,7 +169,7 @@ def render_matrix_preview(predictor: IDSPredictor, selected_row: pd.DataFrame) -
     fig, ax = plt.subplots(figsize=(5, 5))
     sns.heatmap(
         matrix, 
-        cmap="viridis", 
+        cmap="gray", 
         cbar=True, 
         square=True, 
         ax=ax, 
